@@ -1195,7 +1195,7 @@ xhttp.onreadystatechange = function () {
     purgeCredentials();
   }
 };
-xhttp.open("GET", "http://192.168.97.97:3000/offers", true);
+xhttp.open("GET", "http://46.101.179.83/offers", true);
 xhttp.setRequestHeader("access-token", localStorage.getItem("access-token"));
 xhttp.setRequestHeader("client", localStorage.getItem("client"));
 xhttp.setRequestHeader("uid", localStorage.getItem("uid"));
@@ -1216,7 +1216,7 @@ function getCredentials() {
           purgeCredentials();
         }
       };
-      xhttp.open("POST", "http://192.168.97.97:3000/auth/sign_in", true);
+      xhttp.open("POST", "http://46.101.179.83/auth/sign_in", true);
       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhttp.send("email=test@test.com&password=12345678");
       console.log("Requested data!");
