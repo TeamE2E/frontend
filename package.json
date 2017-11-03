@@ -12,7 +12,7 @@
     "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --hot --host 0.0.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
