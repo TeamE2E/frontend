@@ -80,6 +80,7 @@ select {
 }
 
 .menu img {
+  margin-left: 5%;
   width: auto;
   height: 100%;
   float: left;
