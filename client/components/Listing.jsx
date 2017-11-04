@@ -1,5 +1,4 @@
 import React from 'react';
-import Search from './Search.jsx';
 import ListItem from './ListItem.jsx';
 
 export default class Listing extends React.Component {
@@ -12,7 +11,7 @@ export default class Listing extends React.Component {
     });
     return(
       <div>
-        <Search />
+        <h3>Cars nearby</h3>
         {createItems}
        </div>
     );

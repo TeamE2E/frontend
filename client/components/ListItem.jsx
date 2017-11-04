@@ -12,7 +12,7 @@ export default class ListItem extends React.Component {
             Min: {this.props.itemProp.min_kwh}kWh
           </div>
           <div>
-            <h1>{this.props.itemProp.price_cents}ct</h1>
+            <h1>{this.props.itemProp.price_cents}&euro;</h1>
           </div>
        </li>
     );

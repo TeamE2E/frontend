@@ -1,5 +1,6 @@
 import React from 'react';
-import Search from './Search.jsx';
+import Menu from './Menu.jsx';
+import Map from './Map.jsx';
 import Listing from './Listing.jsx';
 
 export default class App extends React.Component {
@@ -17,7 +18,15 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Listing itemsProp={this.state.items}/>
+        <Menu/>
+        <div className="content">
+          <div className="left">
+            <Map/>
+          </div>
+          <div className="right">
+            <Listing itemsProp={this.state.items}/>
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
-import Search from './components/Search.jsx';
 import Listing from './components/Listing.jsx';
 import './styles.css';
 
