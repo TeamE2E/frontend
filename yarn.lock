@@ -3456,7 +3456,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -3598,6 +3598,12 @@ react-google-maps@^9.2.2:
     recompose "^0.26.0"
     scriptjs "^2.5.8"
     warning "^3.0.0"
+
+react-stripe-elements@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-stripe-elements/-/react-stripe-elements-1.2.0.tgz#06665f0e0c01c336ca4a7d30fb95adb9c6375725"
+  dependencies:
+    prop-types "^15.5.10"
 
 react@^16.0.0:
   version "16.0.0"

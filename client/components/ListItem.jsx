@@ -2,7 +2,6 @@ import React from 'react';
 
 export default class ListItem extends React.Component {
   render() {
-    console.log(this);
     return (
        <li className="list-group-item d-flex justify-content-between align-items-center">
           <div style={{float: 'left'}}>
