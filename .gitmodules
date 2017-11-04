@@ -1,0 +1,3 @@
+[submodule "dist/calculator"]
+	path = dist/calculator
+	url = https://github.com/TeamE2E/ProfitCalculator.git
