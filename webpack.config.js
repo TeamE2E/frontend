@@ -5,6 +5,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   filename: 'index.html',
   inject: 'body'
 })
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: './client/index.js',
@@ -15,8 +16,19 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+      {
+				test: /\.css$/,
+				use: ExtractTextPlugin.extract({
+					use: "css-loader"
+				})
+			}
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [
+    HtmlWebpackPluginConfig,
+    new ExtractTextPlugin({
+  			filename: "./styles.css",
+  			allChunks: true
+  		})]
 }
