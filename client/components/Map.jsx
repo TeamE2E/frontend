@@ -10,7 +10,7 @@ const MyMap = withGoogleMap(props =>
   <GoogleMap
       defaultZoom={17}
       defaultCenter={{ lat: 50.0870471, lng: 14.4205023 }}>
-    <Marker position={{ lat: 50.0870471, lng: 14.4205023 }} icon={image}/>
+      <Marker position={{ lat: 50.0870471, lng: 14.4205023 }} icon={image}/>
   </GoogleMap>
 );
 
