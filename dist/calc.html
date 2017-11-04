@@ -29,10 +29,10 @@ function convert() {
   total_fee = fee_per_kwh * sellable_kwh
   possible_profit = revenue_total - price_per_full_charge - total_fee
 
- document.getElementById("price").innerHTML = "Price per full charge: " + price_per_full_charge + " €"
+  document.getElementById("price").innerHTML = "Price per full charge: " + price_per_full_charge + " &euro;"
   document.getElementById("sellable_kwh").innerHTML = "Sellable kwh: " + sellable_kwh + " kwh"
-  document.getElementById("profit").innerHTML = "Possible profit per full charge: " + possible_profit + " €"
-  document.getElementById("our_fee").innerHTML = "Our fee: " + total_fee + " €"
+  document.getElementById("profit").innerHTML = "Possible profit per full charge: " + possible_profit + " &euro;"
+  document.getElementById("our_fee").innerHTML = "Our fee: " + total_fee + " &euro;"
 }
 </script>
 
