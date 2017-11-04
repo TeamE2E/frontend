@@ -87,6 +87,14 @@ select {
   margin-right: 16px;
 }
 
+.confirmation-list-item {
+  margin-top: 32px;
+}
+
+.confirmation-breakdown {
+  margin-top: 32px;
+}
+
 * {
   box-sizing: border-box;
 }

@@ -38,9 +38,9 @@ export default class Summary extends React.Component {
         <Menu/>
         <div className="content">
           <div className="left">
-            <h1>Booking Confirmation</h1>
-            <ListItem itemProp={offer}/>
-            <Breakdown itemProp={offer}/>
+            <h1 style={{"margin-bottom": "90px"}}>Booking Confirmation</h1>
+            <ListItem itemProp={offer} className="confirmation-list-item"/>
+            <Breakdown itemProp={offer} />
           </div>
           <div className="right">
           <StripeProvider apiKey="pk_test_vZ3uWz1vStAwAI0S3LXX4iS8">
