@@ -23,7 +23,7 @@ xhttp.setRequestHeader("uid", localStorage.getItem("uid"));
 xhttp.send();
 
 var app = ReactDOM.render(
-  <Summary />,
+  <App />,
   document.getElementById('root')
 );
 

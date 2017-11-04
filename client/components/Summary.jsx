@@ -2,18 +2,6 @@ import React from 'react';
 import Menu from './Menu.jsx';
 import ListItem from './ListItem.jsx';
 import Breakdown from './Breakdown.jsx';
-import CreditCardForm from './CreditCardForm.jsx'
-import {
-  CardElement,
-  CardNumberElement,
-  CardExpiryElement,
-  CardCVCElement,
-  PostalCodeElement,
-  PaymentRequestButtonElement,
-  StripeProvider,
-  Elements,
-  injectStripe,
-} from 'react-stripe-elements';
 
 const offer = {
   "available_kwh": 29,
@@ -43,11 +31,7 @@ export default class Summary extends React.Component {
             <Breakdown itemProp={offer} />
           </div>
           <div className="right">
-          <StripeProvider apiKey="pk_test_vZ3uWz1vStAwAI0S3LXX4iS8">
-            <Elements>
-              <CreditCardForm fontSize={10} />
-            </Elements>
-          </StripeProvider>
+            <h1>Checkout Stuff goes here!</h1>
           </div>
         </div>
       </div>
