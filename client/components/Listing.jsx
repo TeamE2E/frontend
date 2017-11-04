@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './Search.jsx';
 import ListItem from './ListItem.jsx';
 
 export default class Listing extends React.Component {
@@ -9,8 +10,9 @@ export default class Listing extends React.Component {
     var createItems = this.props.itemsProp.map(function(item) {
         return(<ListItem itemProp={item}/>)
     });
-    return (
+    return(
       <div>
+        <Search />
         {createItems}
        </div>
     );

@@ -3,9 +3,9 @@ import React from 'react';
 export default class Search extends React.Component {
   render() {
     return (
-      <div className="col-md-12">
+      <li className="list-group-item d-flex justify-content-between align-items-center" style={{padding: 0}}>
          <div className="input-group" id="adv-search">
-            <input type="text" className="form-control" placeholder="Search for snippets" />
+            <input type="text" className="form-control" placeholder="Search for snippets" style={{border: 0}}/>
             <div className="input-group-btn">
                <div className="btn-group" role="group">
                   <div className="dropdown dropdown-lg">
@@ -38,7 +38,7 @@ export default class Search extends React.Component {
                </div>
             </div>
          </div>
-      </div>
+      </li>
     );
   }
 }

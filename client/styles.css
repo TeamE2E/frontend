@@ -1,6 +1,9 @@
 body {
     padding-top: 50px;
 }
+select {
+  -webkit-appearance:none;
+}
 .dropdown.dropdown-lg .dropdown-menu {
     margin-top: -1px;
     padding: 6px 20px;
@@ -31,13 +34,21 @@ body {
 
 @media screen and (min-width: 768px) {
     #adv-search {
-        width: 500px;
+        width: 100%;
+        max-width: 840px;
         margin: 0 auto;
     }
     .dropdown.dropdown-lg {
         position: static !important;
     }
     .dropdown.dropdown-lg .dropdown-menu {
-        min-width: 500px;
+        min-width: 100%;
     }
+}
+#root {
+  max-width: 840px;
+  margin: 0 auto;
+}
+*  {
+  outline: 0;
 }

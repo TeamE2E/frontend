@@ -17,7 +17,6 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Search />
         <Listing itemsProp={this.state.items}/>
       </div>
     );

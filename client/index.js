@@ -26,7 +26,6 @@ var app = ReactDOM.render(
   document.getElementById('root')
 );
 
-
 function getCredentials() {
   if (typeof(Storage) !== "undefined") {
     if(localStorage.getItem("access-token") === null) {
