@@ -17,7 +17,7 @@ const offer = {
 
 export default class Summary extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {

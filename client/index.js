@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
 import Summary from './components/Summary.jsx';
 import Listing from './components/Listing.jsx';
+import { Locations, Location } from 'react-router-component'
 import './styles.css';
 
 getCredentials();
@@ -22,8 +23,11 @@ xhttp.setRequestHeader("uid", localStorage.getItem("uid"));
 xhttp.send();
 
 var app = ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  <Locations hash>
+    <Location path="/" handler={App} />
+    <Location path="/confirm/:id" handler={Summary} />
+  </Locations>
+  ,document.getElementById('root')
 );
 
 function getCredentials() {
