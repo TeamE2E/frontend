@@ -7,6 +7,10 @@ import { Locations, Location } from 'react-router-component'
 import HttpUtil from './util/HttpUtil.jsx';
 import './styles.css';
 
+Array.prototype.flatMap = function(lambda) {
+    return Array.prototype.concat.apply([], this.map(lambda));
+};
+
 var app = ReactDOM.render(
   <Locations hash>
     <Location path="/" handler={App} />
