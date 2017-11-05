@@ -12,7 +12,14 @@ export default class Summary extends React.Component {
     };
   }
   componentDidMount() {
-    HttpUtil.sendAuthenticatedRequest("GET", "offers/" + this.props.id, this.setItem.bind(this));
+    var t = this;
+    HttpUtil.getCredentials(function (err) {
+      if (err) {
+        console.log('please refresh');
+      } else {
+        HttpUtil.sendAuthenticatedRequest("GET", "offers/" + t.props.id, t.setItem.bind(t));
+      }
+    });
   }
   setItem(responseText) {
     this.setState({

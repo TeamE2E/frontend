@@ -2,7 +2,7 @@ const createReactClass = require('create-react-class');
 
 const HttpUtil = createReactClass({
   statics: {
-    getCredentials: function() {
+    getCredentials: function(callback) {
       if (typeof(Storage) !== "undefined") {
         if(localStorage.getItem("access-token") === null) {
           var xhttp = new XMLHttpRequest();
@@ -11,8 +11,9 @@ const HttpUtil = createReactClass({
                 localStorage.setItem("access-token", this.getResponseHeader("access-token"));
                 localStorage.setItem("client", this.getResponseHeader("client"));
                 localStorage.setItem("uid", this.getResponseHeader("uid"));
+                callback(null);
              } else if(this.status == 401) {
-                this.purgeCredentials();
+                callback('Unauthorized');
              }
           };
           xhttp.open("POST", "http://46.101.179.83:3000/auth/sign_in", true);
@@ -21,6 +22,7 @@ const HttpUtil = createReactClass({
           console.log("Requested data!");
         } else {
           console.log("Data in storage!");
+          callback();
         }
       } else {
         console.log("Unsupported!");

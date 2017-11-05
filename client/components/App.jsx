@@ -12,7 +12,14 @@ export default class App extends React.Component {
     };
   }
   componentDidMount() {
-    HttpUtil.sendAuthenticatedRequest("GET", "offers", this.setItems.bind(this));
+    var t = this;
+    HttpUtil.getCredentials(function (err) {
+      if (err) {
+        console.log('please refresh');
+      } else {
+        HttpUtil.sendAuthenticatedRequest("GET", "offers", t.setItems.bind(t));
+      }
+    });
   }
   setItems(items) {
     var json_items = JSON.parse(items);
