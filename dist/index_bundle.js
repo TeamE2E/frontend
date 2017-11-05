@@ -6160,11 +6160,21 @@ var ListItem = function (_React$Component) {
   }
 
   _createClass(ListItem, [{
+    key: 'redirect',
+    value: function redirect(id, e) {
+      e.preventDefault();
+      window.location.assign('/#/confirm/' + id);
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'li',
-        { className: 'list-group-item d-flex justify-content-between align-items-center' },
+        { className: 'list-group-item d-flex justify-content-between align-items-center', onClick: function onClick(e) {
+            return _this2.redirect(_this2.props.itemProp.id, e);
+          } },
         _react2.default.createElement(
           'div',
           { style: { float: 'left' } },
@@ -41738,19 +41748,19 @@ module.exports = CaptureClicks;
 /* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "0df6cb32347a307d8efa5e081da60d4d.png";
+module.exports = __webpack_require__.p + "client/logo.png";
 
 /***/ }),
 /* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fc7924d93d978f0c1cc5493fed68e214.png";
+module.exports = __webpack_require__.p + "client/marker_small_black.png";
 
 /***/ }),
 /* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "54e83b1683d55846621e53940d752cb4.png";
+module.exports = __webpack_require__.p + "client/me.png";
 
 /***/ })
 /******/ ]);
