@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from './Menu.jsx';
 import ListItem from './ListItem.jsx';
+import EmailForm from './EmailForm.jsx';
 import Breakdown from './Breakdown.jsx';
 import HttpUtil from '../util/HttpUtil.jsx';
 
@@ -37,7 +38,7 @@ export default class Summary extends React.Component {
             <Breakdown itemProp={this.state.item} />
           </div>
           <div className="right">
-            <h1>Checkout Stuff goes here!</h1>
+            <EmailForm/>
           </div>
         </div>
       </div>

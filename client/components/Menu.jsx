@@ -5,7 +5,8 @@ export default class Menu extends React.Component {
     return(
       <div className="menu">
         <img src="./client/logo.png"></img>
-        <h1>TopUp</h1>
+        <span className="name">TopUp</span>
+        <span className="td">TECH DEMO</span>
       </div>
     );
   }

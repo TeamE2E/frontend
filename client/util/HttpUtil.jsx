@@ -34,7 +34,7 @@ const HttpUtil = createReactClass({
       localStorage.removeItem("uid");
       // this.getCredentials();
     },
-    sendAuthenticatedRequest: function(method, endpoint, successFunc) {
+    sendAuthenticatedRequest: function(method, endpoint, successFunc, payload) {
       var instance = this;
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
@@ -49,7 +49,12 @@ const HttpUtil = createReactClass({
       xhttp.setRequestHeader("access-token", localStorage.getItem("access-token"));
       xhttp.setRequestHeader("client", localStorage.getItem("client"));
       xhttp.setRequestHeader("uid", localStorage.getItem("uid"));
-      xhttp.send();
+
+      if(payload) {
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      }
+
+      xhttp.send(payload);
     }
   },
   render() {
