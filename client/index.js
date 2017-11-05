@@ -7,8 +7,6 @@ import { Locations, Location } from 'react-router-component'
 import HttpUtil from './util/HttpUtil.jsx';
 import './styles.css';
 
-HttpUtil.getCredentials();
-
 var app = ReactDOM.render(
   <Locations hash>
     <Location path="/" handler={App} />
