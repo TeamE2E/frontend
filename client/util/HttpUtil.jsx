@@ -22,7 +22,7 @@ const HttpUtil = createReactClass({
           console.log("Requested data!");
         } else {
           console.log("Data in storage!");
-          callback();
+          callback(null);
         }
       } else {
         console.log("Unsupported!");
@@ -32,7 +32,7 @@ const HttpUtil = createReactClass({
       localStorage.removeItem("access-token");
       localStorage.removeItem("client");
       localStorage.removeItem("uid");
-      this.getCredentials();
+      // this.getCredentials();
     },
     sendAuthenticatedRequest: function(method, endpoint, successFunc) {
       var instance = this;
@@ -41,6 +41,7 @@ const HttpUtil = createReactClass({
          if (this.readyState == 4 && this.status == 200) {
             successFunc(this.responseText);
          } else if(this.status == 401) {
+            console.log('Please refresh');
             HttpUtil.purgeCredentials();
          }
       };
