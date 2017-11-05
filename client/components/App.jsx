@@ -15,9 +15,11 @@ export default class App extends React.Component {
     HttpUtil.sendAuthenticatedRequest("GET", "offers", this.setItems.bind(this));
   }
   setItems(items) {
+    var json_items = JSON.parse(items);
     this.setState({
-      items: JSON.parse(items)
+      items: json_items
     });
+    this.child.setMarkers(json_items);
   }
   render() {
     return (
@@ -25,7 +27,7 @@ export default class App extends React.Component {
         <Menu/>
         <div className="content">
           <div className="left">
-            <Map/>
+            <Map onRef={ref => (this.child = ref)}/>
           </div>
           <div className="right">
             <Listing itemsProp={this.state.items}/>
