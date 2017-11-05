@@ -11,7 +11,7 @@ export default class ListItem extends React.Component {
     console.log(this.refs.email.value);
 
     HttpUtil.sendAuthenticatedRequest("POST", "bookings", function() {
-
+        window.location.assign('/#/success');
     }, "offer_id=10&email=" + this.refs.email.value);
   }
   render() {
