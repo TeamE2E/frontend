@@ -5,7 +5,11 @@ import Summary from './components/Summary.jsx';
 import Listing from './components/Listing.jsx';
 import { Locations, Location } from 'react-router-component'
 import HttpUtil from './util/HttpUtil.jsx';
+
 import './styles.css';
+import './logo.png';
+import './marker_small_black.png';
+import './me.png';
 
 Array.prototype.flatMap = function(lambda) {
     return Array.prototype.concat.apply([], this.map(lambda));
